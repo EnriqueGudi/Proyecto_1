@@ -1,0 +1,59 @@
+html{
+    height: 100%;
+  }
+
+
+
+.card{
+  border:0;
+}
+
+.card-header, .modal-header{
+  background-color: #009ada;
+  color: white;
+}
+
+.card-footer{
+  background-color: #0a3266;
+  color: white;
+}
+
+
+/*lluvia*/
+.rain-drop {
+  position: absolute;
+  top: -50px;
+  width: 2px;
+  height: 50px;
+  background-color: #00F;
+  animation: rain-fall linear;
+}
+
+@keyframes rain-fall {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+#rain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+/*lluvia*/
