@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Ubicaciones\UbicacionesController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -20,6 +21,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', function () {
         return view('index');
     });
+
+    Route::get('/ubicaciones', [UbicacionesController::class, 'index'])->name('ShowUbicaciones');
 
 
 

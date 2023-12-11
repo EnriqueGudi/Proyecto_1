@@ -57,7 +57,7 @@
             <div class="d-flex flex-column align-items-center align-items-sm-start text-white min-vh-100" style="background-color: #343a3f; max-width: 160px;">
                 <div id="head_menu" style="width:100%; display: flex; justify-content: center; align-items: center">
 
-                    <img id="img_logo" src={{asset('imagenes/plantilla/logo.png')}} style="max-width: 100%">
+                    <img id="img_logo" src={{asset('imagenes/plantilla/logo.png')}} style="max-width: 100%; scale:.8;">
 
                 </div>
                 <span class="ms-1 etiqueta" style="font-size: 10px; padding-top: 5px;"><b>¡BIENVENIDO!</b></span>
@@ -72,9 +72,9 @@
                 </div>
                 
                 <ul id="menu" class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" style="width: 100%; font-size: x-small;">
-                    <li id="opcion_camaras" class="nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="Camaras">
+                    <li id="opcion_ubicaciones" class="nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="Ubicaciones">
                         <a href="#" class="nav-link align-middle px-0" style="color: white;">
-                            <i class=" bi-camera"></i> <span class="ms-1 etiqueta">Camaras</span>
+                            <i class=" bi-pin-map-fill"></i> <span class="ms-1 etiqueta">Ubicaciones</span>
                         </a>
                     </li>
                     <li>
@@ -133,7 +133,7 @@
 
             </div>
         </div>
-        <div class="col p-0" style="overflow: auto;">
+        <div class="col p-0 FondoAnimado" style="overflow: auto; background: linear-gradient(166deg,#2b93dd 43%,#fff 43%,#fff 62%,#002b66 62%);">
             <div id="header-main" class="p-1" style="background: linear-gradient(90deg,#2b93dd 0%,#fff 50%,#002b66 100%);">
                 <div id="boton_menu" style="width: min-content;">
                     <img src={{asset('imagenes/plantilla/menu_icon.png')}} style="width: 15px; height: 15px; vertical-align: initial;">

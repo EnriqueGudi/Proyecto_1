@@ -5,14 +5,14 @@ html{
 
 /*tablas(datatables)*/
 thead {
-  background-color: #ff3700;
+  background-color: #2b93dd;
   color: white;
 }
 .dataTables_filter {
   margin-bottom: 10px;
 }
 .selected-gudi {
-  background-color: #ffe2d7 !important;
+  background-color: #2b93dd75 !important;
   color: black;
 }
 .nav-item:hover {
@@ -121,4 +121,3 @@ body {
   z-index: 9999;
 }
 /*lluvia*/
-

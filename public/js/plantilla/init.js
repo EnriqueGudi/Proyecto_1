@@ -1,7 +1,7 @@
 $(function() {
 
-    $('#opcion_camaras').click(function() {
-        link_plantilla.function.cargarContenido('camaras');
+    $('#opcion_ubicaciones').click(function() {
+        link_plantilla.function.cargarContenido('ubicaciones');
     });
 
     $('#opcion_elementos').click(function() {

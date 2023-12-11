@@ -24,6 +24,7 @@ $(document).ready(function() {
         if(tooltip==false){
           $('#img_logo').attr('src', 'imagenes/plantilla/logo_min.png');          
             $('#img_logo').attr('height', $('#header-main').outerHeight()/1.1);
+            $('#img_logo').attr('scale', '1');
             $('#menu').css('font-size', '');
             $('#menu_2').css('min-width', '');
             $('#cerrar_sesion').css('font-size', '');
