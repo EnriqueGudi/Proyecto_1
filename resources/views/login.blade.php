@@ -37,7 +37,7 @@
     
     <!-- Estilos generales--> 
     <link rel="icon" type="image/x-icon" href={{asset('images/plantilla/icon.ico')}}>
-    <link rel="stylesheet" href={{asset('css/style.css')}}>
+    <link rel="stylesheet" href={{asset('css/inicio_sesion/style.css')}}>
     <script src={{asset('js/inicio_sesion/script.js')}}></script>
     
 
@@ -46,7 +46,7 @@
 <body class="gray container-fluid" style="background-image: url({{asset('imagenes/plantilla/fondo.jpeg')}}); background-repeat: no-repeat; background-color: #cccccc;  background-position: center;  background-size: cover; /* Resize the background image to cover the entire container */">
     <!-- div de lluvia-->
     <div id="rain-container"></div>
-    <div class="container-fluid" style="text-align: right;"><img src="https://hutchisonportslct.com/wp-content/themes/hphv1/img/hph.png" style="width: 350px;"></div>
+    <div class="container-fluid" style="text-align: right;"><img src="{{asset('imagenes/plantilla/logo.png')}}" style="width: 350px;"></div>
     <div class="container col-md-4 offset-md-4" >
         <div class="card" style="margin-top: 10%">
             <center><h5 class="card-header">Inicio de Sesión</h5></center>
