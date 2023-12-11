@@ -85,6 +85,30 @@
         </div>
     </div>
 
+
+        <!-- Modal ubicacion nueva -->
+        <div class="modal fade" id="modal_ubi_per" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Ubicación</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row div_form">
+                        <div class="col-md-12">
+                            <center><iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d913.0486312939049!2d-102.17898973043947!3d17.954773274733014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDU3JzE3LjIiTiAxMDLCsDEwJzQyLjEiVw!5e1!3m2!1ses-419!2smx!4v1702276112457!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
 </div>
 
 <script src={{asset('js/ubicaciones/link.js')}}></script>
