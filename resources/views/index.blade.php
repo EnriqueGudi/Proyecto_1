@@ -54,7 +54,7 @@
 <div>
     <div class="row flex-nowrap">
         <div id="menu_2" class="col-auto px-sm-2 px-0 bg-dark" style="padding: 0px !important; min-width: 160px;">
-            <div class="d-flex flex-column align-items-center align-items-sm-start text-white min-vh-100" style="background-color: #343a3f; max-width: 160px;">
+            <div class="d-flex flex-column align-items-center align-items-sm-start text-white min-vh-100" style="background-color: #464e54; max-width: 160px;">
                 <div id="head_menu" style="width:100%; display: flex; justify-content: center; align-items: center">
 
                     <img id="img_logo" src={{asset('imagenes/plantilla/logo.png')}} style="max-width: 100%; scale:.8;">
@@ -72,11 +72,13 @@
                 </div>
                 
                 <ul id="menu" class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" style="width: 100%; font-size: x-small;">
+                    @if(Auth::check() && Auth::user()->role === 'Administrador')
                     <li id="opcion_ubicaciones" class="nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="Ubicaciones">
                         <a href="#" class="nav-link align-middle px-0" style="color: white;">
                             <i class=" bi-pin-map-fill"></i> <span class="ms-1 etiqueta">Ubicaciones</span>
                         </a>
                     </li>
+                    @endif
                     <li>
                         <div class="nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="Elementos">
                             <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle" style="color: white;">
@@ -133,7 +135,7 @@
 
             </div>
         </div>
-        <div class="col p-0 FondoAnimado" style="overflow: auto; background: linear-gradient(166deg,#2b93dd 43%,#fff 43%,#fff 62%,#002b66 62%);">
+        <div class="col p-0">
             <div id="header-main" class="p-1" style="background: linear-gradient(90deg,#2b93dd 0%,#fff 50%,#002b66 100%);">
                 <div id="boton_menu" style="width: min-content;">
                     <img src={{asset('imagenes/plantilla/menu_icon.png')}} style="width: 15px; height: 15px; vertical-align: initial;">
