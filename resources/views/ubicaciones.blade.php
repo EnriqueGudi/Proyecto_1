@@ -12,7 +12,7 @@
                 <table id="table_ubicaciones">
                 <thead>
                     <tr>
-                        <th>Organización</th>
+                        <th>Organizaciónes</th>
                         <th>Area</th>
                         <th>Algo más :v</th>
                     </tr>
