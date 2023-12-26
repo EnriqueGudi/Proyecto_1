@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\Ubicaciones\UbicacionesController;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,4 +44,12 @@ Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
     // Ruta de inicio de sesión - Procesamiento
     Route::post('/login', [AuthController::class, 'login']);
+
+    // Ruta de registro - Vista
+    Route::get('/registro', [UserController::class, 'show'])->name('registro');
+    // Ruta de registro - Procesamiento
+    Route::post('/registro', [UserController::class, 'registrar']);
+
+    //Ruta de confirmacion de correo
+    Route::get('/confirmacion/{id}/{token}', [UserController::class, 'confirmar_correo'])->name('confirmacion');
 });

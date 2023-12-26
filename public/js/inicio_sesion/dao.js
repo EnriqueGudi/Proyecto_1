@@ -14,5 +14,19 @@ inicio_sesion.dao = {
        });
     },
 
+    registrar_usuario: function(){
+        var data = new FormData($("#form_registro")[0]);
+        data.append("_token",$('input[name="_token"]').val());
+        
+        return $.ajax({
+           type:"POST",
+           dataType:"JSON",
+           url:"/registro",
+           data: data,
+           processData: false,  // tell jQuery not to process the data
+           contentType: false,  // tell jQuery not to set contentType
+       });
+    },
+
 
 };

@@ -3,7 +3,8 @@ function swal(title, text, type) {
       title: title,
       text: text,
       icon: type,
-      confirmButtonText: 'Aceptar'
+      confirmButtonText: 'Aceptar',
+      allowOutsideClick: false,
     });
   }
 $(document).ready(function() {
