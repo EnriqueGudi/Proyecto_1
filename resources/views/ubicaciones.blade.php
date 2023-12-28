@@ -14,7 +14,7 @@
                     <tr>
                         <th>Organización</th>
                         <th>Area</th>
-                        <th>Algo más :v</th>
+                        <th>descripción</th>
                     </tr>
                 </thead>
                 </table>
@@ -39,36 +39,27 @@
                             <div class="row div_captura">
                                 <div class="col-md-4 cont-input">
                                     <div class="form-group">
-                                        <label for="cam_marca"> Marca </label>
-                                        <select class="form-control" name="cam_marca" id="cam_marca">
+                                        <label for="area_nueva"> Area </label>
+                                        <select class="form-control" name="area_nueva" id="area_nueva">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4 cont-input">
                                     <div class="form-group">
-                                        <label for="cam_modelo"> Modelo </label>
-                                        <select class="form-control" name="cam_modelo" id="cam_modelo">
-                                            <option value>Seleccione...</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 cont-input">
-                                    <div class="form-group">
-                                        <label for="cam_no_serie"> Número de Serie </label>
-                                        <input type="text" name="cam_no_serie" id="cam_no_serie" class="form-control">
+                                        <label for="subarea_nueva"> Subarea </label>
+                                        <input type="text" name="subarea_nueva" id="subarea_nueva" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-4 cont-input">
                                     <div class="form-group">
-                                        <label for="cam_name"> Nombre de la camara </label>
-                                        <input type="text" name="cam_name" id="cam_name" class="form-control">
+                                        <label for="des_sub_nueva"> Descripción subarea </label>
+                                        <input type="text" name="des_sub_nueva" id="des_sub_nueva" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-4 cont-input">
                                     <div class="form-group">
-                                        <label for="cam_mac"> Direccion MAC del dispositivo </label>
-                                        <input type="text" name="cam_mac" id="cam_mac" class="form-control">
+                                        <label for="url_sub_nueva"> URL Google Maps </label>
+                                        <input type="text" name="url_sub_nueva" id="url_sub_nueva" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +77,7 @@
     </div>
 
 
-        <!-- Modal ubicacion nueva -->
+        <!-- Modal ubicaciones -->
         <div class="modal fade" id="modal_ubi_per" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">

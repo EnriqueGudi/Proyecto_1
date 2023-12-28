@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_sub_area')->unique();
             $table->string('descripcion', 300);
+            $table->string('ubicacion_maps', 300);
             $table->foreignId('area_id')->constrained('areas');
             $table->timestamps();
         });
