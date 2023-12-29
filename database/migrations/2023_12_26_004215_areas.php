@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sub_areas', function (Blueprint $table) {
+        Schema::create('areas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_sub_area')->unique();
+            $table->string('nombre_area')->unique();
             $table->string('descripcion', 300);
-            $table->string('ubicacion_maps', 300);
-            $table->foreignId('area_id')->constrained('areas');
+            $table->foreignId('lugar_id')->constrained('lugares');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sub_areas');
+        Schema::dropIfExists('areas');
     }
 };
