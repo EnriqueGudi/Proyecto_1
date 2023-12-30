@@ -1,3 +1,11 @@
+<script>
+    // decodificacion para poder usar los datos
+    var lugares = JSON.parse(@json($lugares));
+    var areas = JSON.parse(@json($areas));
+    var sub_areas = JSON.parse(@json($sub_areas));
+    var ubicacion = JSON.parse(@json($ubicacion));
+    var baseUrl = "{{ url('/') }}";
+</script>
 <div id="display_ubicaciones" class="container" style="display:none">
     <center><h5 class="mt-4">Ubicación de lugares de la empresa</h5></center>
     <hr>
@@ -12,9 +20,9 @@
                 <table id="table_ubicaciones">
                 <thead>
                     <tr>
-                        <th>Organización</th>
+                        <th>Lugar/Sitio</th>
                         <th>Area</th>
-                        <th>descripción</th>
+                        <th>Subarea</th>
                     </tr>
                 </thead>
                 </table>
@@ -39,27 +47,29 @@
                             <div class="row div_captura">
                                 <div class="col-md-4 cont-input">
                                     <div class="form-group">
-                                        <label for="area_nueva"> Area </label>
-                                        <select class="form-control" name="area_nueva" id="area_nueva">
+                                        <label for="new_lugar"> Lugar </label>
+                                        <select class="form-control" name="new_lugar" id="new_lugar">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4 cont-input">
                                     <div class="form-group">
-                                        <label for="subarea_nueva"> Subarea </label>
-                                        <input type="text" name="subarea_nueva" id="subarea_nueva" class="form-control">
+                                        <label for="new_area"> Area </label>
+                                        <select class="form-control" name="new_area" id="new_area">
+                                            <option value>Seleccione...</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4 cont-input">
                                     <div class="form-group">
-                                        <label for="des_sub_nueva"> Descripción subarea </label>
-                                        <input type="text" name="des_sub_nueva" id="des_sub_nueva" class="form-control">
+                                        <label for="new_sub_area"> Subarea </label>
+                                        <input type="text" name="new_sub_area" id="new_sub_area" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-4 cont-input">
                                     <div class="form-group">
-                                        <label for="url_sub_nueva"> URL Google Maps </label>
-                                        <input type="text" name="url_sub_nueva" id="url_sub_nueva" class="form-control">
+                                        <label for="new_url_maps"> URL Google Maps </label>
+                                        <input type="text" name="new_url_maps" id="new_url_maps" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +98,7 @@
                     <div class="modal-body">
                         <div class="row div_form">
                             <div class="col-md-12">
-                                <center><iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d913.0486312939049!2d-102.17898973043947!3d17.954773274733014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDU3JzE3LjIiTiAxMDLCsDEwJzQyLjEiVw!5e1!3m2!1ses-419!2smx!4v1702276112457!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+                                <center id="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d913.0486312939049!2d-102.17898973043947!3d17.954773274733014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDU3JzE3LjIiTiAxMDLCsDEwJzQyLjEiVw!5e1!3m2!1ses-419!2smx!4v1702276112457!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></center>
                             </div>
                         </div>
         

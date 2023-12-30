@@ -1,23 +1,24 @@
 $(function() {
 
+    link_ubicaciones.function.get_lugares();
 
+    $("#new_lugar").on("change", function(){
+        link_ubicaciones.function.get_areas();
+    });
 
-
-    $("#add_camera").on("click", function(){
-        $('#cam_modelo').html("<option value>Seleccione...</option>");
-        $("#formucams").trigger("reset");
+    $("#save_ubicacion").on("click", function(){
+        if($('#formuUbicaciones').valid()){
+            link_ubicaciones.function.set_sub_area();
+        }
     });
 
 
     $('#formuUbicaciones').validate({
         rules: {
-            cam_marca:'required',
-            cam_modelo: 'required',
-            cam_no_serie: 'required',
-            cam_name: 'required',
-            cam_mac: 'required',
-            file1: 'required',
-            foto_ins_cam: 'required',
+            new_lugar:'required',
+            new_area: 'required',
+            new_subarea: 'required',
+            new_url_maps: 'required',
         },
 
         highlight: function(element) {     

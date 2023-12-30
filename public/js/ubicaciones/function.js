@@ -1,19 +1,14 @@
 link_ubicaciones.function = {
 
 
-    fill_table_ubicaciones: function (data2) {
-        var data = [
-            { organizacion: 'LCT', area: 'Sica', algo: '2 cocas' },
-            { organizacion: 'LCMT', area: 'CCTV', algo: '1 coca' },
-            // Agrega más objetos según sea necesario
-        ];
-
+    fill_table_ubicaciones: function (data) {
+        
         link_ubicaciones.tabla_ubicaciones = $('#table_ubicaciones').DataTable( {
             data: data,
             columns: [
-                { data: 'organizacion' },
-                { data: 'area' },
-                { data: 'algo' },
+                { data: 'area.lugar.nombre_lugar' },
+                { data: 'area.nombre_area' },
+                { data: 'nombre_sub_area' },
              
             ],
             dom: 'Bfrtip', // Agrega los botones al contenedor dom
@@ -60,16 +55,72 @@ link_ubicaciones.function = {
                 }
 
                 if(id_table=="#table_ubicaciones"){
-                    link_ubicaciones.function.modal_ubi_per();
-                    $("#modal_ubi_per").modal("show");
+
+                    $.when(link_ubicaciones.function.modal_ubi_per()).done(function(){
+                        $("#modal_ubi_per").modal("show");
+                    });
+
                 }
             }
         });
     },
 
-
-
     modal_ubi_per:function(){  
+        $("#mapa").html("");
+        $("#mapa").html(r.ubicacion_maps);
+    },
+
+    get_lugares:function(){
+
+    let template ='<option value>Seleccione...</option>';
+    lugares.forEach(lugar => {
+        template +=`
+            <option value="${lugar.id}">
+                ${lugar.nombre_lugar}
+            </option>`
+    });
+    $('#formuUbicaciones #new_lugar').html(template);
+      
+    },
+
+    get_areas:function(){
+
+        let template ='<option value>Seleccione...</option>';
+        areas.forEach(area => {
+            if(area.lugar_id==$("#new_lugar").val()){
+            template +=`
+                <option value="${area.id}">
+                    ${area.nombre_area}
+                </option>`
+            }
+        });
+        $('#formuUbicaciones #new_area').html(template);
+          
+    },
+
+    set_sub_area:function(){
+
+        var ajax = link_ubicaciones.dao.set_sub_area();
+        ajax.done(function(response){
+            swal("Aviso",response.message,response.type);
+            if(response.type=="success"){
+               
+                link_ubicaciones.tabla_ubicaciones.row.add({
+                    "area": {
+                        "lugar": {
+                        "nombre_lugar": response.lugar},
+                        "nombre_area": response.area,
+                    },
+                    "nombre_sub_area": response.sub_area,
+                    "ubicacion_maps":response.ubicacion_maps
+                    }).draw()
+                
+                $("#formuUbicaciones")[0].reset();
+                $("#modal_ubicacion_nueva").modal("hide");
+            }
+        }).fail(function (){
+            swal("Aviso!", "Hubo algun error", "error");
+        });
 
     },
 

@@ -8,7 +8,7 @@ link_plantilla.function = {
             $('#contenido-dinamico').html(response);
             if(ruta=="ubicaciones"){
             $.when($("#display_ubicaciones").show("slow")).done(function(){
-                link_ubicaciones.function.fill_table_ubicaciones("ubicaciones");
+                link_ubicaciones.function.fill_table_ubicaciones(ubicacion);
             });
                 
             }

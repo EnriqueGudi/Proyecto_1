@@ -34,6 +34,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('logout');
     // Ruta para cerrar sesión
 
+
+
+    //con permisos de administrador
+    Route::post('/set_ubicacion', [UbicacionesController::class, 'set_sub_area']);
+
+
 });
 
 //rutas sin logear
