@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\Ubicaciones\UbicacionesController;
+use App\Http\Controllers\UsuariosVPNController;
+use App\Http\Controllers\ubicaciones\UbicacionesController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -25,6 +26,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/ubicaciones', [UbicacionesController::class, 'index'])->name('ShowUbicaciones');
 
+    Route::get('/Usuarios_VPN', [UsuariosVPNController::class, 'index'])->name('ShowUsuariosVPN');
 
 
 

@@ -10,7 +10,10 @@ link_plantilla.function = {
             $.when($("#display_ubicaciones").show("slow")).done(function(){
                 link_ubicaciones.function.fill_table_ubicaciones(ubicacion);
             });
-                
+            }else if(ruta=="Usuarios_VPN"){
+                $.when($("#display_usuario_vpn").show("slow")).done(function(){
+                    link_usuarios_vpn.function.fill_table_usuarios_vpn(usuarios_vpn);
+                });
             }
             
         }).fail(function (){

@@ -22,7 +22,7 @@ class UserFactory extends Factory
     {
         return [
             'name' => "Enrique Alexis Gudiño Portilla",
-            'email' => "dark_4500@hotmail.com",
+            'email' => "enrique@gmail.com",
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('123123'),
             'role' => 'Administrador',

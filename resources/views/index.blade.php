@@ -73,21 +73,21 @@
                 
                 <ul id="menu" class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" style="width: 100%; font-size: x-small;">
                     @if(Auth::check() && Auth::user()->role === 'Administrador')
-                    <li id="opcion_ubicaciones" class="nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="Ubicaciones">
-                        <a href="#" class="nav-link align-middle px-0" style="color: white;">
-                            <i class=" bi-pin-map-fill"></i> <span class="ms-1 etiqueta">Ubicaciones</span>
-                        </a>
-                    </li>
+                        <li id="opcion_ubicaciones" class="nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="Ubicaciones">
+                            <a href="#" class="nav-link align-middle px-0" style="color: white;">
+                                <i class=" bi-pin-map-fill"></i> <span class="ms-1 etiqueta">Ubicaciones</span>
+                            </a>
+                        </li>
                     @endif
                     <li>
-                        <div class="nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="Elementos">
-                            <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle" style="color: white;">
-                                <i class=" bi-grid"></i> <span class="ms-1 etiqueta">Elementos</span> </a>
+                        <div class="nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="infraestructura">
+                            <a href="#infraestructura" data-bs-toggle="collapse" class="nav-link px-0 align-middle" style="color: white;">
+                                <i class="bi-building-fill-gear"></i> <span class="ms-1 etiqueta">Infraestructura</span> </a>
                         </div>
-                        <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu" style="margin-left: 0px !important;background-color: rgb(65, 65, 65);">
-                            <li class="w-100 nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="Fuego">
+                        <ul class="collapse nav flex-column ms-1" id="infraestructura" data-bs-parent="#menu" style="margin-left: 0px !important;background-color: rgb(65, 65, 65);">
+                            <li id="opciones_usuarios_vpn" class="w-100 nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="UsuariosVPN">
                                 <a href="#" class="nav-link align-middle px-0" style="color: white;">
-                                <i class=" bi-fire"></i> <span class="ms-1 etiqueta">Fuego</span>
+                                <i class="bi-shield-lock-fill"></i> <span class="ms-1 etiqueta">Usuarios VPN</span>
                                 </a>
                             </li>
                             <li class="nav-item item-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-trigger="hover" data-bs-title="Aire">

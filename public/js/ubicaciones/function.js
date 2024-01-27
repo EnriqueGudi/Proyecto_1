@@ -15,13 +15,13 @@ link_ubicaciones.function = {
             buttons: [
                 {
                     extend: 'excelHtml5', // Habilita el botón de exportación a Excel
-                    filename: 'Reporte_camaras', // Cambia el nombre del archivo a "Reporte_camaras"
-                    title: 'Reporte de Cámaras', // Cambia el titulo a "Reporte de camaras"
+                    filename: 'Reporte_ubicaciones', // Cambia el nombre del archivo a "Reporte_ubicaciones"
+                    title: 'Reporte de Ubicaciones', // Cambia el titulo a "Reporte de ubicaciones"
                 },
                 {
                     extend: 'pdfHtml5', // Habilita el botón de exportación a PDF
-                    filename: 'Reporte_camaras', // Cambia el nombre del archivo a "Reporte_camaras"
-                    title: 'Reporte de Cámaras', // Cambia el titulo a "Reporte de camaras"
+                    filename: 'Reporte_ubicaciones', // Cambia el nombre del archivo a "Reporte_ubicaciones"
+                    title: 'Reporte de Ubicaciones', // Cambia el titulo a "Reporte de ubicaciones"
                 }
             ],
             language: {
@@ -61,6 +61,7 @@ link_ubicaciones.function = {
                     });
 
                 }
+
             }
         });
     },
@@ -123,6 +124,7 @@ link_ubicaciones.function = {
         });
 
     },
+
 
     
 };
