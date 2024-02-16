@@ -21,14 +21,17 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => "Enrique Alexis Gudiño Portilla",
-            'email' => "enrique@gmail.com",
+            'name' => $this->faker->name,
+            'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('123123'),
             'role' => 'Administrador',
             'remember_token' => Str::random(10),
         ];
     }
+    
+    // En tu migración o en cualquier otro lugar donde quieras crear usuarios
+
 
     /**
      * Indicate that the model's email address should be unverified.

@@ -11,10 +11,29 @@ thead {
 .dataTables_filter {
   margin-bottom: 10px;
 }
+
 .selected-gudi {
   background-color: #2b93dd75 !important;
   color: black;
 }
+
+.selected-gudi-parpadeo {
+  background-color: #2b93dd75 !important;
+  color: black;
+  animation: fadeInOut 1s infinite alternate; 
+}
+
+@keyframes fadeInOut {
+  0% {
+    background-color: #2b93dd75;
+    opacity: 0;
+  }
+  100% {
+    background-color: #2b93dd75;
+    opacity: 1;
+  }
+}
+
 .nav-item:hover {
   background-color: #1d282d;
   border-left: 3px solid #2b93dd;

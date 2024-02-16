@@ -9,6 +9,7 @@ function swal(title, text, type) {
   }
 $(document).ready(function() {
 
+/*
 //lluvia
     // Función para crear una gota de lluvia
     function createRainDrop() {
@@ -27,7 +28,7 @@ $(document).ready(function() {
   // Generar gotas de lluvia cada 100 milisegundos
   setInterval(createRainDrop, 100);
 //lluvia  
-
+*/
 
 
 

@@ -7,13 +7,13 @@ link_usuarios_vpn.function = {
 
             rowCallback:function(row,data){
                 if (data['formato'] == "Entregado") {
-                    $(row).css("background-color", "green");
+                    $(row).css("background-color", "#00800094");
                 }else 
                 if (data['formato'] == "Digital") {
                     $(row).css("background-color", "yellow");
                 }else
                 if (data['formato'] == "No") {
-                    $(row).css("background-color", "red");
+                    $(row).css("background-color", "#ff000094");
                 }
             },
           
@@ -53,7 +53,7 @@ link_usuarios_vpn.function = {
                 url: "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
             },
             destroy: true, // Destruye la tabla antes de crear una nueva
-            scrollY: '200px', // Altura fija para el cuerpo de la tabla
+            scrollY: "300px", // Altura fija para el cuerpo de la tabla
             scrollCollapse: true, // Hace que la tabla se encoja en lugar de expandirse
             paging: false, // Deshabilita la paginación
             info: false, // Deshabilita la información de la tabla
@@ -76,9 +76,9 @@ link_usuarios_vpn.function = {
                 link_usuarios_vpn.data = rowData.data();
                 r = link_usuarios_vpn.data;
                 
-                if (!$(this).hasClass('selected-gudi')) {
-                    $('tr.selected-gudi').removeClass('selected-gudi');
-                    $(this).addClass('selected-gudi');
+                if (!$(this).hasClass('selected-gudi-parpadeo')) {
+                    $('tr.selected-gudi-parpadeo').removeClass('selected-gudi-parpadeo');
+                    $(this).addClass('selected-gudi-parpadeo');
                 }
 
                 if(id_table=="#table_user_vpn"){
@@ -88,6 +88,19 @@ link_usuarios_vpn.function = {
         });
     },
 
+    //agregar una ip extra
+    add_ip: function (){
+
+        var elemento = "<div class='col-md-4 cont-input'>"+
+            "<div class='form-group'>"+
+                "<label for='new_ip["+ips_count+"]'> IP "+ips_count+" </label>"+
+                "<input type='text' name='new_ip["+ips_count+"]' id='new_ip["+ips_count+"]' class='form-control'>"+
+            "</div>"+
+        "</div>";
+    
+        $("#div_ips").append(elemento);
+
+    },
 
 
     

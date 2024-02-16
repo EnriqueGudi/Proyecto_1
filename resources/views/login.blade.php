@@ -51,8 +51,9 @@
             swal("{{ $swalParams['title'] }}", "{{ $swalParams['text'] }}", "{{ $swalParams['type'] }}");
         </script>
     @endif
-    <!-- div de lluvia-->
-    <div id="rain-container"></div>
+<!-- div  de lluvia
+<div id="rain-container"></div>
+-->
     <div class="container-fluid" style="text-align: right;"><img src="{{asset('imagenes/plantilla/logo.png')}}" style="width: 350px;"></div>
     <div class="container col-md-4 offset-md-4" >
         <div class="card" style="margin-top: 10%">

@@ -25,10 +25,6 @@
     <!-- moment.js requerido si se desea usar datatimepicker--> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
-    <!-- Datatimepicker--> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-
     <!-- validate js--> 
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 
@@ -48,8 +44,10 @@
   </head>
 
 <body class="gray container-fluid" style="background-image: url({{asset('imagenes/plantilla/fondo.png')}}); background-repeat: no-repeat; background-color: #cccccc;  background-position: center;  background-size: cover; /* Resize the background image to cover the entire container */">
-<!-- div de lluvia-->
+<!-- div  de lluvia
 <div id="rain-container"></div>
+-->
+
 
 <div>
     <div class="row flex-nowrap">
