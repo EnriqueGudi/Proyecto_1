@@ -41,7 +41,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     //con permisos de administrador
     Route::post('/set_ubicacion', [UbicacionesController::class, 'set_sub_area']);
 
-
+    Route::post('/set_usuarioVPN', [UsuariosVPNController::class, 'set_usuarioVPN']);
+    
 });
 
 //rutas sin logear

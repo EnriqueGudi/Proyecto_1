@@ -131,7 +131,7 @@
                                         <label for="new_formato"> Formato Digital/Fisico </label>
                                         <select class="form-control" name="new_formato" id="new_formato">
                                             <option value>Seleccione...</option>
-                                            <option value="Fisico">Fisico</option>
+                                            <option value="Entregado">Fisico</option>
                                             <option value="Digital">Digital</option>
                                             <option value="No">No</option>
                                         </select>
@@ -151,6 +151,12 @@
                                     <label for="new_fecha_exp" class="control-label">Fecha de Expiración</label>
                                     <div class="input-group">
                                         <input type="date" name="new_fecha_exp" id="new_fecha_exp" class="form-control class_aux">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 cont-input">
+                                    <div class="form-group">
+                                        <label for="new_jefe"> Jefe </label>
+                                        <input type="text" name="new_jefe" id="new_jefe" class="form-control">
                                     </div>
                                 </div>
                                 <div class="offset-md-8" style="padding-bottom: 20px;">

@@ -4,8 +4,8 @@ $(function() {
 
     $("#save_usuario_VPN").on('click',function(){
         if($('#formuUsuarioVPN').valid()){
-        
-        }else{console.log("no");}
+            link_usuarios_vpn.function.set_usuarioVPN();
+        }
     }); 
     
     $("#add_ip").on('click',function(){
@@ -38,7 +38,8 @@ $(function() {
             new_fecha_exp: {
                 required: true,
                 date: true // Assuming it's a date field
-            }
+            },
+            new_jefe:'required',
         },
     
         highlight: function(element) {     

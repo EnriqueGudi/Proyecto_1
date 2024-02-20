@@ -15,22 +15,22 @@ class UbicacionesController extends Controller
     public function index()
     {
             
-                $lugares = lugar::all();
-                $areas = area::all();
-                $sub_areas = sub_area::all();
-                
-                // Codificación para no mostrar los valores
-                $lugaresEncoded = json_encode($lugares);
-                $areasEncoded = json_encode($areas);
-                $sub_areasEncoded = json_encode($sub_areas);
-                $ubicacionEncoded = json_encode($sub_areas->load('area.lugar'));
-                
-                return view('ubicaciones', [
-                    'lugares' => $lugaresEncoded,
-                    'areas' => $areasEncoded,
-                    'sub_areas' => $sub_areasEncoded,
-                    'ubicacion' => $ubicacionEncoded,
-                ]);
+        $lugares = lugar::all();
+        $areas = area::all();
+        $sub_areas = sub_area::all();
+        
+        // Codificación para no mostrar los valores
+        $lugaresEncoded = json_encode($lugares);
+        $areasEncoded = json_encode($areas);
+        $sub_areasEncoded = json_encode($sub_areas);
+        $ubicacionEncoded = json_encode($sub_areas->load('area.lugar'));
+        
+        return view('ubicaciones', [
+            'lugares' => $lugaresEncoded,
+            'areas' => $areasEncoded,
+            'sub_areas' => $sub_areasEncoded,
+            'ubicacion' => $ubicacionEncoded,
+        ]);
 
     }
 

@@ -102,6 +102,31 @@ link_usuarios_vpn.function = {
 
     },
 
+    set_usuarioVPN:function(){
 
-    
+        var ajax = link_usuarios_vpn.dao.set_usuarioVPN();
+        ajax.done(function(response){
+            swal("Aviso",response.message,response.type);
+            if(response.type=="success"){
+               
+                link_usuarios_vpn.tabla_usuarios_vpn.row.add({
+                    "area": {
+                        "lugar": {
+                        "nombre_lugar": response.lugar},
+                        "nombre_area": response.area,
+                    },
+                    "nombre_sub_area": response.sub_area,
+                    "ubicacion_maps":response.ubicacion_maps
+                    }).draw()
+                
+                $("#formuUsuarioVPN")[0].reset();
+                $("#modal_usuario_vpn_nuevo").modal("hide");
+            }else if(response.type=="warning"){
+                swal("Aviso!", response.message, response.type);
+            }
+        }).fail(function (){
+            swal("Aviso!", "Hubo algun error", "error");
+        });
+
+    },
 };
