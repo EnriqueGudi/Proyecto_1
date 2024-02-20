@@ -28,7 +28,7 @@ class UsuariosVPNRequest extends FormRequest
             'new_bu' => 'required',
             'new_area' => 'required',
             'new_puesto' => 'required',
-            'new_correo' => 'required',
+            'new_correo' => 'required|email|unique:usuariosvpn,email',
             'new_serv_puer_form' => 'required',
             'new_megavpv' => 'required',
             'new_autenthication' => 'required',
@@ -37,6 +37,8 @@ class UsuariosVPNRequest extends FormRequest
             'new_estado' => 'required',
             'new_fecha_exp' => 'required',
             'new_jefe' => 'required',
+            'new_ip' => 'required|array',
+            'new_ip.*' => 'required|ip',
         ];
     }
 
@@ -44,7 +46,9 @@ class UsuariosVPNRequest extends FormRequest
     {
         return [
             'new_empleado' => 'Nombre de Empleado',
-            'new_user_login' => 'User.login'
+            'new_user_login' => 'User.login',
+            'new_correo' => 'Correo Electronico',
+            'new_ip.*'=> 'IP',
         ];
     }
 

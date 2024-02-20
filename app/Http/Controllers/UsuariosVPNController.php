@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\usuariosVPN;
 use App\Http\Requests\UsuariosVPN\UsuariosVPNRequest;
+use App\Models\destino_forma_vpn;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\ValidationException;
+
 
 class UsuariosVPNController extends Controller
 {
@@ -47,6 +49,23 @@ class UsuariosVPNController extends Controller
             $usuarioVPN->jefe = $datos['new_jefe'];
            
             $usuarioVPN->save();
+
+            //obtener ID del ultimo usuariovpn
+            $usuarioVPNId = $usuarioVPN->id;
+
+            //asignar las ip agregadas y asociarlas al usuariovpn
+            $newIps = $request->input('new_ip');
+
+            foreach ($newIps as $index => $newIp) {
+                // Guardar el valor en la base de datos
+                $destino_forma_vpn = new destino_forma_vpn();
+
+                $destino_forma_vpn->ip = $newIp;
+                $destino_forma_vpn->usuariosVPN_id = $usuarioVPNId;
+                
+                $destino_forma_vpn->save();
+            }
+
             DB::commit();
         }catch(ValidationException $e){
             DB::rollBack();
